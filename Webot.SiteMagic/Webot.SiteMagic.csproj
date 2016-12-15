@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D84C5769-7237-4B88-A0C8-8739D52393D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Webot.SiteMagic</RootNamespace>
+    <AssemblyName>Webot.SiteMagic</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Fanmaquar.pfx</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Release\Webot.SiteMagic.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.83.1.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\sharedlibs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <HintPath>..\sharedlibs\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessProviders\AccessConnectionHelper.cs" />
+    <Compile Include="AccessProviders\AccessMembershipProvider.cs" />
+    <Compile Include="AccessProviders\AccessPersonalizationProvider.cs" />
+    <Compile Include="AccessProviders\AccessProfileProvider.cs" />
+    <Compile Include="AccessProviders\AccessRoleProvider.cs" />
+    <Compile Include="AccessProviders\PersonalizationProviderHelper.cs" />
+    <Compile Include="AccessProviders\SecUtil.cs" />
+    <Compile Include="Common\HttpSecureCookie.cs" />
+    <Compile Include="Common\InvalidCypherTextException.cs" />
+    <Compile Include="Common\IVersion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MachineKeyCryptography.cs" />
+    <Compile Include="Common\SymmetricMethod.cs" />
+    <Compile Include="Common\XmlPackage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\XmlPackageItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Fanmaquar.cs" />
+    <Compile Include="DataAccess\JetAccess.cs" />
+    <Compile Include="IO\DbFileProvider.cs" />
+    <Compile Include="IO\ZipFileVirtualPathProvider.cs" />
+    <Compile Include="SiteMageicView.cs" />
+    <Compile Include="Tags\StoredTags.cs" />
+    <Compile Include="Tags\TempletTag.cs" />
+    <Compile Include="Templet\RequestResDependency.cs" />
+    <Compile Include="Templet\TempletDriving.cs" />
+    <Compile Include="WebUIPackage\DynamicRender.cs" />
+    <Compile Include="WebUIPackage\DynamicResponse.cs" />
+    <Compile Include="Tags\ICustomTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\FileUp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\CookieProtectionHelperWrapper.cs" />
+    <Compile Include="Common\DbHelper.cs" />
+    <Compile Include="Common\RewriteModule.cs" />
+    <Compile Include="Common\ThumbnailUrl.cs" />
+    <Compile Include="Common\Util.cs" />
+    <Compile Include="Tags\IfTag.cs" />
+    <Compile Include="Tags\TagParse.cs" />
+    <Compile Include="WebUIPackage\DynamicPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUIPackage\DynamicPagedContentBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUIPackage\IDynamicResponse.cs" />
+    <Compile Include="WebUIPackage\TrackPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUIPackage\TrackUnit.cs" />
+    <Compile Include="WebUIPackage\VerifyCodeImage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\WebUI.cs" />
+    <Compile Include="DataAccess\AccessWebChannel.cs" />
+    <Compile Include="DataAccess\AccessWebNews.cs" />
+    <Compile Include="DataAccess\IWebChannel.cs" />
+    <Compile Include="DataAccess\IWebNews.cs" />
+    <Compile Include="Tags\DbStoredCustomTag.cs" />
+    <Compile Include="Templet\FilenameSetting.cs" />
+    <Compile Include="Tags\FileNameTag.cs" />
+    <Compile Include="Templet\HtmlTextGenerator.cs" />
+    <Compile Include="Tags\HtmlTextTag.cs" />
+    <Compile Include="Templet\IContainerCaller.cs" />
+    <Compile Include="IFilledByID.cs" />
+    <Compile Include="Tags\IInternalTag.cs" />
+    <Compile Include="IJobManager.cs" />
+    <Compile Include="Templet\IPagedContent.cs" />
+    <Compile Include="Templet\IResourceDependency.cs" />
+    <Compile Include="Templet\IStorage.cs" />
+    <Compile Include="ISupportProgress.cs" />
+    <Compile Include="Tags\ListTag.cs" />
+    <Compile Include="Templet\MultiResDependency.cs" />
+    <Compile Include="Templet\PageGenerator.cs" />
+    <Compile Include="Tags\PagerTag.cs" />
+    <Compile Include="Templet\PageTemplet.cs" />
+    <Compile Include="SupportProgressBase.cs" />
+    <Compile Include="Tags\SystemTag.cs" />
+    <Compile Include="Tags\TagBase.cs" />
+    <Compile Include="Templet\TempletParse.cs" />
+    <Compile Include="Templet\TempletSetting.cs" />
+    <Compile Include="WebJob.cs" />
+    <Compile Include="WebJobManager.cs" />
+    <Compile Include="WebUIPackage\AdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Fanmaquar.pfx">
+      <Link>Fanmaquar.pfx</Link>
+    </None>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
