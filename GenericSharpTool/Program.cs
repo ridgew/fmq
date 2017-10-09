@@ -9,8 +9,11 @@ namespace GenericSharpTool
     {
         static void Main(string[] args)
         {
+            BankUtil.MainTest(args);
+
             if (args != null && args.Length > 0)
             {
+                #region SqlReportFile Test
                 using (SqlReportFile file = new SqlReportFile(args[0]))
                 {
                     //string content = file.TextContent();
@@ -37,6 +40,8 @@ namespace GenericSharpTool
                     if (list.Any())
                         Console.WriteLine(list.First().ToString());
                 }
+                #endregion
+
             }
 
             Console.WriteLine("处理完成！");
